@@ -6,6 +6,7 @@
 #define ASSIGNMENT_3_HUFFMANNODE_H
 
 #include <vector>
+#include <memory>
 
 using namespace std;
 class huffmanNode{
