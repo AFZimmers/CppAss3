@@ -20,7 +20,6 @@ public:
     bool codeBit;       //tells if 0 it is on the left, 1 if it is on the right
     bool root = false;
 
-
     huffmanNode(char c, int count);// creates a new node using the given characters.
     ~huffmanNode();
     huffmanNode(huffmanNode * left, huffmanNode * right); // creates a new node from the 2 nodes left and right.

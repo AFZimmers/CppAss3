@@ -45,5 +45,9 @@ public:
     void createTree(); // cycles through the priority ques and creates the tree from the leaves to the root.
     bool successful(); // check if tree build was successful
 
+    //debugging
+    int getNumNodes();
+    int getTotalChars()
+
 };
 #endif //ASSIGNMENT_3_HUFFMANTREE_H

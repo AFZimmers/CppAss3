@@ -82,3 +82,10 @@ int huffmanTree::countNode(shared_ptr <huffmanNode> root) {
         return count;
     }
 }
+
+int huffmanTree::getNumNodes() {
+    return countNode(root);
+}
+int huffmanTree::getTotalChars() {
+    return root->chars.size();
+}
