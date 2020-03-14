@@ -47,7 +47,7 @@ public:
 
     //debugging
     int getNumNodes();
-    int getTotalChars()
+    int getTotalChars();
 
 };
 #endif //ASSIGNMENT_3_HUFFMANTREE_H

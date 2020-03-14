@@ -130,10 +130,12 @@ ZMMALE001::huffmanEncode &ZMMALE001::huffmanEncode::operator=(const ZMMALE001::h
 }
 
 bool ZMMALE001::huffmanEncode::encode() {
-    if(buildFeqTable() && buildTree()){
-        buildCodeTable();
-        encodeTxt();
-        return true;
+    if(buildFeqTable()) {
+        if (buildTree()) {
+            buildCodeTable();
+            encodeTxt();
+            return true;
+        }
     }
     return false;
 }
@@ -146,11 +148,13 @@ void ZMMALE001::huffmanEncode::buildCode(shared_ptr<huffmanNode> &node, char &ch
         buildCode(node->left,character,code);
         buildCode(node->right,character,code);
     } else{
-        for(int c=0;c<node->chars.size();c++){
-            code.push_back(node->codeBit);
-            buildCode(node->left,character,code);
-            buildCode(node->right,character,code);
-            return;
+        for(int c=0;c<node->chars.size()  ;c++){
+            if (node->chars[c] == character) {
+                code.push_back(node->codeBit);
+                buildCode(node->left, character, code);
+                buildCode(node->right, character, code);
+                return;
+            }
         }
         return;
     }
@@ -181,6 +185,6 @@ int ZMMALE001::huffmanEncode::getRootValue() {
     return tree.root->nodeValue;
 }
 
-double ZMMALE001::huffmanEncode::GetComperrsionRatio() {
+double ZMMALE001::huffmanEncode::getCompressionRation() {
     return compressionRatio;
 }

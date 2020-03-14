@@ -48,7 +48,7 @@ namespace  ZMMALE001 {
     int getNumNodes();
     int getTotalChars();
     int getRootValue();
-    double GetComperrsionRatio();
+    double getCompressionRation();
 
     };
 

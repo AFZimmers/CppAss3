@@ -8,12 +8,14 @@
 
 bool BitOut::writeBit(bool i) {
     if (count==8){
-        writeBit(buffer);
+        writeChar(buffer);
         count=0;
         buffer=0;
 
     }
     buffer |= (i << (7 - count));
+    count++;
+
     return true;
 }
 
