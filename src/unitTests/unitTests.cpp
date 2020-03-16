@@ -52,7 +52,7 @@ TEST_CASE("Check if the root of the Huffman Tree root has the correct number of 
     code.encode();
     code2.encode();
 
-    REQUIRE( code.getTotalChars() == 29); // corresponds to number of elements in freq table
+    REQUIRE( code.getTotalChars() == 36); // corresponds to number of elements in freq table
     REQUIRE( code2.getTotalChars() == 36);
 
 }
