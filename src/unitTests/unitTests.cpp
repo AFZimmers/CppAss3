@@ -14,10 +14,10 @@ TEST_CASE("Check if the freq map has the right number of elements", "[FrequencyM
     code.encode();
     code2.encode();
 
-    REQUIRE(code.getNumFreq() == 29); // alphabet + fullstop + space + comma
-    REQUIRE(code2.getNumFreq() == 23);
+    REQUIRE(code.getNumFreq() == 39); // alphabet + fullstop + space + comma
+    REQUIRE(code2.getNumFreq() == 39);
 }
-//todo look at the right count
+
 TEST_CASE("Check if the counts in unordered map (frequency table) are correct", "[FrequencyTableCounts]") {
 
     ZMMALE001::huffmanEncode code("../text/test1.txt", "outTest");
@@ -25,12 +25,12 @@ TEST_CASE("Check if the counts in unordered map (frequency table) are correct", 
     code.encode();
     code2.encode();
 
-    REQUIRE(code.getCount('s') == 5);
-    REQUIRE(code.getCount(' ') == 17);
-    REQUIRE(code.getCount('e') == 12);
-    REQUIRE(code2.getCount('B') == 1);
-    REQUIRE(code2.getCount('G') == 1);
-    REQUIRE(code2.getCount('C') == 5);
+    REQUIRE(code.getCount('m') == 1);
+    REQUIRE(code.getCount(' ') == 18);
+    REQUIRE(code.getCount('c') == 4);
+    REQUIRE(code2.getCount('b') == 3);
+    REQUIRE(code2.getCount('a') == 10);
+    REQUIRE(code2.getCount('z') == 2);
 }
 
 TEST_CASE("Check if the Huffman tree has the correct number of nodes", "[NodeNumber]") {
@@ -40,11 +40,11 @@ TEST_CASE("Check if the Huffman tree has the correct number of nodes", "[NodeNum
     code.encode();
     code2.encode();
 
-    REQUIRE( code.getNumNodes() == 57);
-    REQUIRE( code2.getNumNodes() == 45);
+    REQUIRE( code.getNumNodes() == 72);
+    REQUIRE( code2.getNumNodes() == 73);
 
 }
-
+//todo look at the right count
 TEST_CASE("Check if the root of the Huffman Tree root has the correct number of characters present in the text", "[Characters]") {
 
     ZMMALE001::huffmanEncode code("../text/test1.txt", "outTest");
@@ -64,8 +64,8 @@ TEST_CASE("Check if the Huffman tree root has the correct count", "[RootValue]")
     code.encode();
     code2.encode();
 
-    REQUIRE( code.getRootValue() == 125);
-    REQUIRE( code2.getRootValue() == 137);
+    REQUIRE( code.getRootValue() == 108);
+    REQUIRE( code2.getRootValue() == 158);
 
 }
 
