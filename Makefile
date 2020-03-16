@@ -7,14 +7,14 @@ CC=g++
 CCFLAGS=-std=c++11
 
 SRC = src/huffmanCode/main.cpp \
-        src/huffmanCode/HuffmanTree.cpp \
-        src/huffmanCode/HuffmanTree.h \
-        src/huffmanCode/HuffmanNode.cpp \
-        src/huffmanCode/HuffmanNode.h \
-        src/huffmanCode/HuffenEncode.cpp \
-        src/huffmanCode/HuffenEncode.h \
-        src/huffmanCode/HuffenDecode.cpp \
-        src/huffmanCode/HuffenDecode.h \
+        src/huffmanCode/huffmanTree.cpp \
+        src/huffmanCode/huffmanTree.h \
+        src/huffmanCode/huffmanNode.cpp \
+        src/huffmanCode/huffmanNode.h \
+        src/huffmanCode/huffenEncode.cpp \
+        src/huffmanCode/huffenEncode.h \
+        src/huffmanCode/huffenDecode.cpp \
+        src/huffmanCode/huffenDecode.h \
         src/huffmanCode/BitIn.cpp \
         src/huffmanCode/BitIn.h \
         src/huffmanCode/BitOut.cpp \
