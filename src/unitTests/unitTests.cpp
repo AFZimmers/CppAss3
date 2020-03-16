@@ -14,8 +14,8 @@ TEST_CASE("Check if the freq map has the right number of elements", "[FrequencyM
     code.encode();
     code2.encode();
 
-    REQUIRE(code.getNumFreq() == 39); // alphabet + fullstop + space + comma
-    REQUIRE(code2.getNumFreq() == 39);
+    REQUIRE(code.getNumFreq() == 36); // alphabet + fullstop + space + comma
+    REQUIRE(code2.getNumFreq() == 37);
 }
 
 TEST_CASE("Check if the counts in unordered map (frequency table) are correct", "[FrequencyTableCounts]") {
@@ -64,7 +64,7 @@ TEST_CASE("Check if the Huffman tree root has the correct count", "[RootValue]")
     code.encode();
     code2.encode();
 
-    REQUIRE( code.getRootValue() == 108);
+    REQUIRE( code.getRootValue() == 107);
     REQUIRE( code2.getRootValue() == 158);
 
 }

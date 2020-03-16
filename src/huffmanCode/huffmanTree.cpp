@@ -73,13 +73,13 @@ huffmanTree & huffmanTree::operator=(const huffmanTree &rhs) {
 
 int huffmanTree::countNode(shared_ptr <huffmanNode> root) {
     if(root==nullptr){
-        return 0;
+        return 0; // tree is then empty has no nodes
     }
     else{
-        int count=1;
+        int count=1; //starts count
         count+=countNode(root->left);
         count+=countNode(root->right);
-        return count;
+        return count; //returns the count
     }
 }
 
