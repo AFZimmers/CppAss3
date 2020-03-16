@@ -40,7 +40,7 @@ TEST_CASE("Check if the Huffman tree has the correct number of nodes", "[NodeNum
     code.encode();
     code2.encode();
 
-    REQUIRE( code.getNumNodes() == 72);
+    REQUIRE( code.getNumNodes() == 77);
     REQUIRE( code2.getNumNodes() == 73);
 
 }
