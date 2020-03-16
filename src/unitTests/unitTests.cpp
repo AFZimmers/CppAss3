@@ -14,11 +14,11 @@ TEST_CASE("Check if the freq map has the right number of elements", "[FrequencyM
     code.encode();
     code2.encode();
 
-    REQUIRE(code.getNumFreq() == 36); // alphabet + fullstop + space + comma
+    REQUIRE(code.getNumFreq() == 36);
     REQUIRE(code2.getNumFreq() == 37);
 }
 
-TEST_CASE("Check if the counts in unordered map (frequency table) are correct", "[FrequencyTableCounts]") {
+TEST_CASE("Check if the counts in unordered map the requency table are correct", "[FrequencyTableCounts]") {
 
     ZMMALE001::huffmanEncode code("../text/test1.txt", "outTest");
     ZMMALE001::huffmanEncode code2("../text/test2.txt", "outTest");
@@ -33,7 +33,7 @@ TEST_CASE("Check if the counts in unordered map (frequency table) are correct", 
     REQUIRE(code2.getCount('z') == 2);
 }
 
-TEST_CASE("Check if the Huffman tree has the correct number of nodes", "[NodeNumber]") {
+TEST_CASE("Check if the number of nodes in the Huffman tree has the correct", "[NodeNumber]") {
 
     ZMMALE001::huffmanEncode code("../text/test1.txt", "outTest");
     ZMMALE001::huffmanEncode code2("../text/test2.txt", "outTest");
@@ -44,7 +44,6 @@ TEST_CASE("Check if the Huffman tree has the correct number of nodes", "[NodeNum
     REQUIRE( code2.getNumNodes() == 73);
 
 }
-//todo look at the right count
 TEST_CASE("Check if the root of the Huffman Tree root has the correct number of characters present in the text", "[Characters]") {
 
     ZMMALE001::huffmanEncode code("../text/test1.txt", "outTest");
@@ -54,6 +53,9 @@ TEST_CASE("Check if the root of the Huffman Tree root has the correct number of 
 
     REQUIRE( code.getTotalChars() == 36); // corresponds to number of elements in freq table
     REQUIRE( code2.getTotalChars() == 37);
+
+   // ASSERT_EQUAL("../text/test1.txt","outTest");
+
 
 }
 
