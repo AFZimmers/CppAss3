@@ -11,10 +11,10 @@ SRC = src/huffmanCode/main.cpp \
         src/huffmanCode/huffmanTree.h \
         src/huffmanCode/huffmanNode.cpp \
         src/huffmanCode/huffmanNode.h \
-        src/huffmanCode/huffenEncode.cpp \
-        src/huffmanCode/huffenEncode.h \
-        src/huffmanCode/huffenDecode.cpp \
-        src/huffmanCode/huffenDecode.h \
+        src/huffmanCode/huffmanEncode.cpp \
+        src/huffmanCode/huffmanEncode.h \
+        src/huffmanCode/huffmanDecode.cpp \
+        src/huffmanCode/huffmanDecode.h \
         src/huffmanCode/BitIn.cpp \
         src/huffmanCode/BitIn.h \
         src/huffmanCode/BitOut.cpp \
