@@ -40,7 +40,7 @@ TEST_CASE("Check if the Huffman tree has the correct number of nodes", "[NodeNum
     code.encode();
     code2.encode();
 
-    REQUIRE( code.getNumNodes() == 77);
+    REQUIRE( code.getNumNodes() == 71);
     REQUIRE( code2.getNumNodes() == 73);
 
 }
@@ -65,7 +65,7 @@ TEST_CASE("Check if the Huffman tree root has the correct count", "[RootValue]")
     code2.encode();
 
     REQUIRE( code.getRootValue() == 107);
-    REQUIRE( code2.getRootValue() == 158);
+    REQUIRE( code2.getRootValue() == 157);
 
 }
 
@@ -77,7 +77,7 @@ TEST_CASE("Check if coding table has the correct number of encoded characters.",
     code.encode();
     code2.encode();
 
-    REQUIRE( code.getNumCodeTable() == 29);
+    REQUIRE( code.getNumCodeTable() == 36);
     REQUIRE( code2.getNumCodeTable() == 23);
 }
 
