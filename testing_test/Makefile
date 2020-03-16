@@ -2,7 +2,7 @@
 #Aander Zimmermann ZMMALE001
 
 CC=g++
-CCFLAGS=-std=c++14
+CCFLAGS=-std=c++11
 
 SRC = ../src/unitTests/unitTests.cpp \
         ../src/unitTests/catch.hpp \
