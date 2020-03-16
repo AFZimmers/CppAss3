@@ -4,7 +4,7 @@
 CC=g++
 CCFLAGS=-std=c++11
 
-SRC = ../src/unitTests/UnitTesting.cpp \
+SRC = ../src/unitTests/unitTests.cpp \
         ../src/unitTests/catch.hpp \
 		../src/huffmanCode/huffmanTree.cpp \
         ../src/huffmanCode/huffmanTree.h \
@@ -14,10 +14,10 @@ SRC = ../src/unitTests/UnitTesting.cpp \
         ../src/huffmanCode/huffmanEncode.h \
         ../src/huffmanCode/huffmanDecode.cpp \
         ../src/huffmanCode/huffmanDecode.h \
-        ../src/bitstream/BitIn.cpp \
-        ../src/bitstream/BitIn.h \
-        ../src/bitstream/BitOut.cpp \
-        ../src/bitstream/BitOut.h \
+        ../src/huffmanCode/BitIn.cpp \
+        ../src/huffmanCode/BitIn.h \
+        ../src/huffmanCode/BitOut.cpp \
+        ../src/huffmanCode/BitOut.h \
 
 OBJ = $(SRC:.cpp=.o)
 
