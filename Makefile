@@ -4,7 +4,7 @@
 ## Main Program
 
 CC=g++
-CCFLAGS=-std=c++14
+CCFLAGS=-std=c++11
 
 SRC = src/huffmanCode/main.cpp \
         src/huffmanCode/HuffmanTree.cpp \
