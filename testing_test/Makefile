@@ -6,14 +6,14 @@ CCFLAGS=-std=c++11
 
 SRC = ../src/unitTests/UnitTesting.cpp \
         ../src/unitTests/catch.hpp \
-		../src/huffencode/huffmanTree.cpp \
-        ../src/huffencode/huffmanTree.h \
-        ../src/huffencode/huffmanNode.cpp \
-        ../src/huffencode/huffmanNode.h \
-        ../src/huffencode/huffmanEncode.cpp \
-        ../src/huffencode/huffmanEncode.h \
-        ../src/huffencode/huffmanDecode.cpp \
-        ../src/huffencode/huffmanDecode.h \
+		../src/huffmanCode/huffmanTree.cpp \
+        ../src/huffmanCode/huffmanTree.h \
+        ../src/huffmanCode/huffmanNode.cpp \
+        ../src/huffmanCode/huffmanNode.h \
+        ../src/huffmanCode/huffmanEncode.cpp \
+        ../src/huffmanCode/huffmanEncode.h \
+        ../src/huffmanCode/huffmanDecode.cpp \
+        ../src/huffmanCode/huffmanDecode.h \
         ../src/bitstream/BitIn.cpp \
         ../src/bitstream/BitIn.h \
         ../src/bitstream/BitOut.cpp \

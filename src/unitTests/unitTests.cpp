@@ -4,7 +4,7 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 
 #include "catch.hpp"
-#include "../huffenCode/huffmanEncode.h"
+#include "../huffmanCode/huffmanEncode.h"
 
 // text file which includes all the letters of the alphabet, spaces, comma and fullstop.
 TEST_CASE("Check if the freq map has the right number of elements", "[FrequencyMapElements]") {
