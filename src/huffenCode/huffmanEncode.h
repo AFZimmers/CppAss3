@@ -42,9 +42,9 @@ namespace  ZMMALE001 {
     void buildCode(shared_ptr<huffmanNode>& node, char& character, huffCode& code);
 
     //debugging
-    int getNumFeq();
+    int getNumFreq();
     int getCount(char c);
-    int getNumbCodeTable();
+    int getNumCodeTable();
     int getNumNodes();
     int getTotalChars();
     int getRootValue();

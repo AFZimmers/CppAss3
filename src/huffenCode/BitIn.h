@@ -16,7 +16,7 @@ namespace ZMMMALE001 {
     public:
         bool status;
 
-        BitIn(std::string filename);
+        BitIn(const std::string& filename);
         BitIn(){};
         ~BitIn();
 

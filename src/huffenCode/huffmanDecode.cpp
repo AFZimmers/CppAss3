@@ -66,9 +66,9 @@ void ZMMALE001::huffmanDecode::setCodeTable() {
             std::string c, code;
             in >> c;
             in >> code;
-            if (c.compare("nn") == 0 || c.compare("nnn") == 0)
+            if (c == "nn" || c.compare("nnn") == 0)
                 c = "\n";
-            if (c.compare("ss") == 0 || c.compare("sss") == 0)
+            if (c == "ss" || c.compare("sss") == 0)
                 c = " ";
             codeTable[code] = c;
         }

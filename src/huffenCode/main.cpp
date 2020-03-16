@@ -13,10 +13,10 @@ int main(int argc, char *argv[]){
         std::string output= std::string(argv[2]);
         ZMMALE001::huffmanEncode code(input, output);
         code.encode();
-        int freq=code.getNumFeq();
+        int freq=code.getNumFreq();
         int nodes=code.getNumNodes();
         int tc=code.getTotalChars();
-        int ct=code.getNumbCodeTable();
+        int ct=code.getNumCodeTable();
         std::cout<<"Compression Complete.\nCompression Ration: "<<(code.getCompressionRation()*100)<<" %"<<std::endl;
     } else if(argc==4){
         std::string inputText=std::string(argv[1]);

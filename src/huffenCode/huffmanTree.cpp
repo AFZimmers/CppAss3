@@ -72,7 +72,7 @@ huffmanTree & huffmanTree::operator=(const huffmanTree &rhs) {
 }
 
 int huffmanTree::countNode(shared_ptr <huffmanNode> root) {
-    if(root==NULL){
+    if(root==nullptr){
         return 0;
     }
     else{

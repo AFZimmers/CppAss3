@@ -1,9 +1,8 @@
 //
 // Created by User on 2020-03-12.
 //
-#include <fstream>
-#include <iostream>
 
+#include <iostream>
 #include "huffmanEncode.h"
 #include "BitOut.h"
 
@@ -30,10 +29,10 @@ bool ZMMALE001::huffmanEncode::buildTree() {
 }
 
 void ZMMALE001::huffmanEncode::buildCodeTable() {
-    for(int c=0; c<tree.root->chars.size();c++){
+    for(char & c : tree.root->chars){
         huffCode code;
-        buildCode(tree.root,tree.root->chars[c],code);
-        codeTable[tree.root->chars[c]]=code;
+        buildCode(tree.root,c,code);
+        codeTable[c]=code;
     }
 
 }
@@ -54,9 +53,10 @@ void ZMMALE001::huffmanEncode::encodeTxt() {
             }else {
                 header << it->first << " ";
             }
-            for (int x = 0; x < it->second.size(); x++) {
-                header << it->second[x];
+            for (auto && x : it->second) {
+                header << x;
             }
+
             header << std::endl;
         }
     } else {
@@ -73,8 +73,8 @@ void ZMMALE001::huffmanEncode::encodeTxt() {
     if (in.is_open() && out.is_open()) {
         while (in.good()) {
             char c = char(in.get());
-            for (int i = 0; i < codeTable[c].size(); i++) {
-                bool v = codeTable[c][i] == 1;
+            for (auto && i : codeTable[c]) {
+                bool v = i == 1;
                 out << v;
                 bitOut.writeBit(v);
                 totalOutputBits++;
@@ -141,7 +141,7 @@ bool ZMMALE001::huffmanEncode::encode() {
 }
 
 void ZMMALE001::huffmanEncode::buildCode(shared_ptr<huffmanNode> &node, char &character, ZMMALE001::huffCode &code) {
-    if(node == NULL){
+    if(node == nullptr){
         return;
     }
     if(node->root){
@@ -161,7 +161,7 @@ void ZMMALE001::huffmanEncode::buildCode(shared_ptr<huffmanNode> &node, char &ch
 
 }
 
-int ZMMALE001::huffmanEncode::getNumFeq() {
+int ZMMALE001::huffmanEncode::getNumFreq() {
     return freqMap.size();
 }
 
@@ -169,7 +169,7 @@ int ZMMALE001::huffmanEncode::getCount(char c) {
     return freqMap[c];
 }
 
-int ZMMALE001::huffmanEncode::getNumbCodeTable() {
+int ZMMALE001::huffmanEncode::getNumCodeTable() {
     return codeTable.size()-1;
 }
 

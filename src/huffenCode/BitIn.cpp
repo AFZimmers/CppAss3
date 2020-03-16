@@ -6,7 +6,7 @@
 #include "BitIn.h"
 
 
-ZMMMALE001::BitIn::BitIn(std::string filename) {
+ZMMMALE001::BitIn::BitIn(const std::string& filename) {
     in.open(filename, std::ios::binary | std::ios::in);
     // std::cout<<in.get();
     count = 0;
